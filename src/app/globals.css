@@ -1,0 +1,15 @@
+/* Tailwind 4 se importa con UNA línea (el curso pone las 3 directivas @tailwind de Tailwind 3). */
+@import "tailwindcss";
+
+/* EJERCICIO 7: que dark: se active con class="dark" en <html> (y no con el tema de Windows). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Colores base: claro por defecto, oscuro cuando <html> tiene la clase dark. */
+body {
+  background: #ffffff;
+  color: #111827;
+}
+.dark body {
+  background: #030712;
+  color: #f3f4f6;
+}
